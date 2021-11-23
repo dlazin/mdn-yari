@@ -1,0 +1,99 @@
+<%
+
+const locale = env.locale;
+
+const baseURL = `/${locale}/docs/Related/EPUB/`;
+
+const text = mdn.localStringMap({
+  "en-US": {
+    "EPUB": "EPUB",
+    "EPUB_overview": "EPUB overview",
+    "Relationship_to_the_web": "Relationship to the Web",
+    "Reference": "Reference",
+      "Structure": "Structure",
+        "Structure_overview": "Structure overview",
+        "Open_container_format": "Open container format (OCF)",
+        "Mimetype_file": "Mimetype file",
+        "META-INF_directory": "META-INF directory",
+        "Content_directory": "Content directory",
+      "Package_file": "Package file",
+        "Package_file_overview": "Package file overview",
+        "Metadata": "Metadata",
+        "Manifest": "Manifest",
+        "Spine": "Spine",
+      "Navigation": "Navigation",
+        "Navigation_overview": "Navigation overview",
+        "TOC": "TOC",
+        "Landmarks": "Landmarks",
+        "Page_list": "Page list",
+      "Publication_content": "Publication content",
+        "Publication_content_overview": "Publication content overview",
+        "XHTML": "XHTML",
+        "SVG": "SVG",
+        "CSS": "CSS",
+        "Fonts": "Fonts",
+        "Images": "Images",
+        "Audio": "Audio",
+        "Video": "Video",
+  },
+});
+
+%>
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="<%=baseURL%>"><%=text['EPUB']%></a></li>
+    <li><a href="<%=baseURL%>Overview"><%=text['Overview']%></a></li>
+    <li><a href="<%=baseURL%>Relationship_to_the_web"><%=text['Relationship_to_the_web']%></a></li>
+    <li><strong><%=text['Reference']%></strong></li>
+    <li class="toggle">
+      <details open>
+        <summary><%=text['Structure']%></summary>
+        <ol>
+          <li><a href="<%=baseURL%>Structure/Overview"><%=text['Structure_overview']%></a></li>
+          <li><a href="<%=baseURL%>Structure/OCF"><%=text['Open_container_format']%></a></li>
+          <li><a href="<%=baseURL%>Structure/Mimetype"><%=text['Mimetype_file']%></a></li>
+          <li><a href="<%=baseURL%>Structure/META-INF"><%=text['META-INF_directory']%></a></li>
+          <li><a href="<%=baseURL%>Structure/Content"><%=text['Content_directory']%></a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><%=text['Package_file']%></summary>
+        <ol>
+          <li><a href="<%=baseURL%>Package/Overview"><%=text['Package_file_overview']%></a></li>
+          <li><a href="<%=baseURL%>Package/Metadata"><%=text['Metadata']%></a></li>
+          <li><a href="<%=baseURL%>Package/Manifest"><%=text['Manifest']%></a></li>
+          <li><a href="<%=baseURL%>Package/Spine"><%=text['Spine']%></a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><%=text['Navigation']%></summary>
+        <ol>
+          <li><a href="<%=baseURL%>Navigation/Overview"><%=text['Navigation_overview']%></a></li>
+          <li><a href="<%=baseURL%>Navigation/TOC"><%=text['TOC']%></a></li>
+          <li><a href="<%=baseURL%>Navigation/Landmarks"><%=text['Landmarks']%></a></li>
+          <li><a href="<%=baseURL%>Navigation/Page-list"><%=text['Page_list']%></a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details open>
+        <summary><%=text['Publication_content']%></summary>
+        <ol>
+          <li><a href="<%=baseURL%>Content/Overview"><%=text['Publication_content_overview']%></a></li>
+          <li><a href="<%=baseURL%>Content/XHTML"><%=text['XHTML']%></a></li>
+          <li><a href="<%=baseURL%>Content/SVG"><%=text['SVG']%></a></li>
+          <li><a href="<%=baseURL%>Content/CSS"><%=text['CSS']%></a></li>
+          <li><a href="<%=baseURL%>Content/Fonts"><%=text['Fonts']%></a></li>
+          <li><a href="<%=baseURL%>Content/Images"><%=text['Images']%></a></li>
+          <li><a href="<%=baseURL%>Content/Audio"><%=text['Audio']%></a></li>
+          <li><a href="<%=baseURL%>Content/Video"><%=text['Video']%></a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
